@@ -1,0 +1,137 @@
+ body {
+    display: flex;
+    background-color: rgba(68, 0, 255, 1);
+    min-height: 100vh;
+    width: 100%;
+    cursor: url('../imgs/cursor.svg') 16 16, auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    }
+    .NormalMenu {
+        /* position: relative; */
+        display: flex;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        height: 2vw;
+        width: 35vw;
+        justify-content: space-evenly;
+    }
+
+    .HeaderText {
+        /* position: absolute; */
+        color: white;
+        font-family: 'FuturaHeavy';
+        text-decoration: none;
+        cursor: url('../imgs/cursor.svg') 16 16, auto;
+    }
+    .HeaderText:hover {
+        opacity: 0.8;
+    }
+
+    .LaboratotyHeader {
+        text-decoration-line: underline;
+    }
+
+ h1 {
+  color: #FFF;
+  font-family: "TTTravels";
+  font-size: 4vw;
+ }
+
+ p {
+    color: #FFF;
+
+font-family: "FuturaBook";
+font-size: 1.5vw;
+line-height: 120%;
+ }
+
+
+    .VideoWrapper {   
+  top: 3vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video1 {
+  height: auto;
+  width: 88%;
+  border-radius: 4vw;
+  z-index: 1;
+}
+
+.VideoText {
+    z-index: 2;
+   top: -4vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TextImg {
+    height: auto;
+    width: 90%;
+}
+
+.first {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.TextWrap1 {
+      position: relative;
+     display: flex;
+     left: 4vw;
+     flex-direction: column;
+     gap: 1.75vw;
+}
+
+.SliderContainer1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.VideoWrapper1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+
+.VideoWrapper1 video {
+    width: calc((100% / 2) - 10px); 
+    height: auto;
+    object-fit: cover;
+    margin: 0 5px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
