@@ -4,11 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Книга</title>
-    <link rel="stylesheet" href="./stylesheets/style.css">
+        <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="./stylesheets/book.css">
     <link rel="shortcut icon" href="./imgs/favicon.svg" type="favicon">
 </head>
 <body>
-    
+        <header class="NormalMenu">
+        <a class="HeaderText MainHeader" href="./main.html">Главная</a>
+        <a class="HeaderText LaboratotyHeader" href="./laboratory.html">Лаборатория</a>
+        <a class="HeaderText PharmacyHeader" href="./pharmacy.html">Аптека</a>
+        <a class="HeaderText BookHeader" href="./book.html">Книга</a>
+        <a class="HeaderText PostersHeader" href="./posters.html">Выставки</a>
+    </header>
+
+    <div class="VideoWrapper">
+        <video class="BookVideo" src="./imgs/book.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <section class="section first">
+         <div class="TextWrap">
+            <h1>Книга</h1>
+            <p>Эта книга — не просто история лаборатории, а манифест <br> новой эпохи, где наука перестает быть элитарной <br>
+и становится общим достоянием. Через призму <br> архитектуры, технологий и философии Flying Gazes авторы <br> показывают, как прозрачность и инновации могут спасти планету.</p>
+        </div>
+
+         <div class="SliderContainer1">
+            <div class="VideoWrapper1">
+                <div class="slide-pair">
+                    <video autoplay loop muted playsinline><source src="./imgs/book1.mp4" type="video/mp4"></video>
+                    <video autoplay loop muted playsinline><source src="./imgs/book2.mp4" type="video/mp4"></video>
+                </div>
+                <div class="slide-pair">
+                    <video autoplay loop muted playsinline><source src="./imgs/book3.mp4" type="video/mp4"></video>
+                    <video autoplay loop muted playsinline><source src="./imgs/book4.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+            
+            <button id="prev1" class="SmallButton">❮</button>
+            <button id="next1" class="SmallButton">❯</button>
+        </div>
+    </section>
+
 </body>
 </html>

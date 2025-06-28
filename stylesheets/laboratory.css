@@ -45,8 +45,8 @@ p {
     line-height: 120%;
 }
 
-/* Объединенные секции */
-.first, .second, .third {
+
+.section {
     display: flex;
     flex-direction: column;
     width: 100%;
