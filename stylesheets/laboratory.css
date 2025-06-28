@@ -1,4 +1,4 @@
- body {
+body {
     display: flex;
     background-color: rgba(68, 0, 255, 1);
     min-height: 100vh;
@@ -6,132 +6,456 @@
     cursor: url('../imgs/cursor.svg') 16 16, auto;
     flex-direction: column;
     overflow-x: hidden;
-    }
-    .NormalMenu {
-        /* position: relative; */
-        display: flex;
-        margin-top: 2vw;
-        margin-left: 2vw;
-        height: 2vw;
-        width: 35vw;
-        justify-content: space-evenly;
-    }
+}
 
-    .HeaderText {
-        /* position: absolute; */
-        color: white;
-        font-family: 'FuturaHeavy';
-        text-decoration: none;
-        cursor: url('../imgs/cursor.svg') 16 16, auto;
-    }
-    .HeaderText:hover {
-        opacity: 0.8;
-    }
+.NormalMenu {
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 2vw;
+    width: 35vw;
+    justify-content: space-evenly;
+}
 
-    .LaboratotyHeader {
-        text-decoration-line: underline;
-    }
+.HeaderText {
+    color: white;
+    font-family: 'FuturaHeavy';
+    text-decoration: none;
+    cursor: url('../imgs/cursor.svg') 16 16, auto;
+}
 
- h1 {
-  color: #FFF;
-  font-family: "TTTravels";
-  font-size: 4vw;
- }
+.HeaderText:hover {
+    opacity: 0.8;
+}
 
- p {
+.LaboratotyHeader {
+    text-decoration-line: underline;
+}
+
+h1 {
     color: #FFF;
+    font-family: "TTTravels";
+    font-size: 4vw;
+}
 
-font-family: "FuturaBook";
-font-size: 1.5vw;
-line-height: 120%;
- }
+p {
+    color: #FFF;
+    font-family: "FuturaBook";
+    font-size: 1.5vw;
+    line-height: 120%;
+}
 
+/* Объединенные секции */
+.first, .second, .third {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
-    .VideoWrapper {   
-  top: 3vw;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.TextWrap {
+    position: relative;
+    display: flex;
+    left: 4vw;
+    flex-direction: column;
+    gap: 1.75vw;
+    max-width: 80%;
+}
+
+.VideoWrapper {   
+    top: 3vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .video1 {
-  height: auto;
-  width: 88%;
-  border-radius: 4vw;
-  z-index: 1;
+    height: auto;
+    width: 88%;
+    border-radius: 4vw;
+    z-index: 1;
 }
 
 .VideoText {
     z-index: 2;
-   top: -4vw;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    top: -4vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .TextImg {
     height: auto;
     width: 90%;
 }
 
-.first {
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-}
-
-.TextWrap1 {
-      position: relative;
-     display: flex;
-     left: 4vw;
-     flex-direction: column;
-     gap: 1.75vw;
-}
-
 .SliderContainer1 {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: 4vw auto;
     overflow: hidden;
     position: relative;
 }
 
 .VideoWrapper1 {
     display: flex;
+    transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    width: 200%;
+    opacity: 0;
+}
+
+.slide-pair {
+    display: flex;
+    width: 50%; 
+    gap: 1.5vw;
+    padding: 0 1vw;
+    box-sizing: border-box;
+}
+
+.slide-pair video {
+    width: 100%;
+    height: 40vw;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 2vw;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.slide-pair video:hover {
+    transform: scale(1.02);
+}
+
+.triple-slider {
+    position: relative;
+    width: 95%;
+    max-width: 1800px;
+    height: 80vh;
+    min-height: 600px;
+    margin: 8vw auto;
+    overflow: visible;
+}
+
+.slides-container {
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    perspective: 1000px;
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 1.5vw 3vw rgba(0, 0, 0, 0.3));
     transition: transform 0.5s ease;
 }
 
-
-.VideoWrapper1 video {
-    width: calc((100% / 2) - 10px); 
-    height: auto;
-    object-fit: cover;
-    margin: 0 5px;
-    border-radius: 15px;
-    overflow: hidden;
+.slide.left {
+    width: 40%;
+    height: 75%;
+    left: 8%;
+    transform: translateY(10%) scale(0.9);
+    z-index: 1;
+    opacity: 0.9;
 }
 
-#prev, #next {
+.slide.center {
+    width: 50%;
+    height: 95%;
+    left: 50%;
+    transform: translate(-50%, -5%) scale(1);
+    z-index: 3;
+}
+
+.slide.right {
+    width: 40%;
+    height: 75%;
+    right: 8%;
+    transform: translateY(10%) scale(0.9);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.slide:hover img {
+    transform: scale(1.07);
+}
+
+.slide.center:hover img {
+    transform: scale(1.15);
+}
+
+.SmallButton {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 20px;
+    z-index: 20;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: 5vw;
+    min-width: 50px;
+    min-height: 50px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('../imgs/SmallButton.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    color: rgba(68, 0, 255, 1);
+}
+
+.SliderContainer1 .SmallButton {
     z-index: 10;
 }
 
-#prev {
-    left: 10px;
+.SliderContainer1 .SmallButton:nth-child(2) {
+    left: 2vw;
 }
 
-#next {
-    right: 10px;
+.SliderContainer1 .SmallButton:nth-child(3) {
+    right: 2vw;
+}
+
+.triple-slider .SmallButton.prev {
+    left: 1.5vw;
+}
+
+.triple-slider .SmallButton.next {
+    right: 1.5vw;
+}
+
+.SliderContainer1 .SmallButton:hover {
+    opacity: 1;
+    background-color: rgba(68, 0, 255, 1);
+    transform: translateY(-50%) scale(1.15);
+    color: white;
+    background-image: none;
+    box-shadow: 0 0 2vw rgba(68, 0, 255, 0.7);
+}
+
+.triple-slider .SmallButton:hover {
+    opacity: 1;
+    background-color: white;
+    transform: translateY(-50%) scale(1.15);
+    color: rgba(68, 0, 255, 1);
+    background-image: none;
+    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1600px) {
+    .triple-slider .SmallButton.prev {
+        left: 0.5vw;
+    }
+    .triple-slider .SmallButton.next {
+        right: 0.5vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .triple-slider .SmallButton {
+        width: 6vw;
+        height: 6vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+    p {
+        font-size: 2.5vw;
+    }
+    .SmallButton {
+        width: 10vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
+    .triple-slider .SmallButton {
+        width: 12vw;
+        height: 12vw;
+        font-size: 5vw;
+    }
+    .triple-slider .SmallButton.prev {
+        left: 1vw;
+    }
+    .triple-slider .SmallButton.next {
+        right: 1vw;
+    }
+    .slide.left,
+    .slide.right {
+        width: 35%;
+        height: 65%;
+    }
+    .slide.center {
+        width: 45%;
+        height: 85%;
+    }
+}
+
+.triple-slider {
+    overflow: visible;
+    position: relative;
+    padding: 0 4vw;
+}
+
+.triple-slider .SmallButton {
+    z-index: 30;
+}
+
+.triple-slider .SmallButton {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+@media (min-width: 1600px) {
+    .triple-slider .SmallButton.prev {
+        left: calc(50% - 45vw);
+    }
+    .triple-slider .SmallButton.next {
+        right: calc(50% - 45vw);
+    }
+}
+
+@media (max-width: 1400px) {
+    .triple-slider .SmallButton.prev {
+        left: 1vw;
+    }
+    .triple-slider .SmallButton.next {
+        right: 1vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .triple-slider .SmallButton {
+        width: 6vw;
+        height: 6vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .triple-slider .SmallButton.prev {
+        left: 0.5vw;
+    }
+    .triple-slider .SmallButton.next {
+        right: 0.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .triple-slider .SmallButton {
+        width: 12vw;
+        height: 12vw;
+        font-size: 5vw;
+    }
+    .triple-slider .SmallButton.prev {
+        left: 2vw;
+    }
+    .triple-slider .SmallButton.next {
+        right: 2vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .triple-slider .SmallButton.prev {
+        left: 1vw;
+    }
+    .triple-slider .SmallButton.next {
+        right: 1vw;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.triple-slider {
+    position: relative;
+    padding: 0 3vw;
+    box-sizing: border-box;
+}
+
+.MainFooter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vw;
+    background-image: url('../imgs/footer.svg');
+      background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.FooterImg {
+    width: 102%;
+    height: 20vw;
+    z-index: 1;
+}
+
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15vw;
+  padding: 30px 0;
+}
+
+.FooterBtn {
+  display: flex;
+  text-decoration: none;
+  color: rgba(68, 0, 255, 1);
+  font-family: 'FuturaHeavy';
+  font-size: 1.4vw;
+  background-image: url('../imgs/button.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+  width: 15vw;     
+  height: 3vw;  
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.FooterBtn:hover {
+  opacity: 0.65;
 }

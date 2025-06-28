@@ -4,51 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лаборатория</title>
-        <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="./stylesheets/laboratory.css">
     <link rel="shortcut icon" href="./imgs/favicon.svg" type="favicon">
 </head>
 <body>
 
-        <header class="NormalMenu">
-       <a class="HeaderText MainHeader" href="./main.html">Главная</a>
-       <a class="HeaderText LaboratotyHeader" href="./laboratory.html">Лаборатория</a>
-       <a class="HeaderText PharmacyHeader" href="./pharmacy.html">Аптека</a>
-       <a class="HeaderText BookHeader" href="./book.html">Книга</a>
-       <a class="HeaderText PostersHeader" href="./posters.html">Выставки</a>
+    <header class="NormalMenu">
+        <a class="HeaderText MainHeader" href="./main.html">Главная</a>
+        <a class="HeaderText LaboratotyHeader" href="./laboratory.html">Лаборатория</a>
+        <a class="HeaderText PharmacyHeader" href="./pharmacy.html">Аптека</a>
+        <a class="HeaderText BookHeader" href="./book.html">Книга</a>
+        <a class="HeaderText PostersHeader" href="./posters.html">Выставки</a>
     </header>
 
     <div class="VideoWrapper">
-    <video class="video1" src="./imgs/video1.MOV" autoplay loop muted playsinline><video src=""></video></video>
- </div>
-
- <section class="first">
- <div class="VideoText"><img class="TextImg" src="./imgs/Flying Gazes lab.svg" alt=""></div>
-
-     <section class="first">
-
-        <div class="TextWrap1">
-        <h1>Пространоство без границ</h1>
-        <p>Ученые, художники, экологи, посетители — мы объединяем <br>тех, кто готов менять мир. <br>
-Наш секрет? Междисциплинарность. Технологии <br> рождаются на стыке биологии, дизайна и социальных наук.</p>
+        <video class="video1" src="./imgs/video1.MOV" autoplay loop muted playsinline></video>
     </div>
 
-    <div class="SliderContainer1">
+    <section class="section first">
+        <div class="VideoText"><img class="TextImg" src="./imgs/Flying Gazes lab.svg" alt=""></div>
+
+        <div class="TextWrap">
+            <h1>Пространоство без границ</h1>
+            <p>Ученые, художники, экологи, посетители — мы объединяем <br>тех, кто готов менять мир. <br>
+            Наш секрет? Междисциплинарность. Технологии <br> рождаются на стыке биологии, дизайна и социальных наук.</p>
+        </div>
+
+        <div class="SliderContainer1">
             <div class="VideoWrapper1">
-                <video autoplay loop muted playsinline><source src="./imgs/pharmacyVideo.mp4" type="video/mp4"></video>
-                <video autoplay loop muted playsinline><source src="./imgs/labVideo.mp4" type="video/mp4"></video>
-                <video autoplay loop muted playsinline><source src="./imgs/cafeVideo.mp4" type="video/mp4"></video>
-                <video autoplay loop muted playsinline><source src="./imgs/hallVideo.mp4" type="video/mp4"></video>
+                <div class="slide-pair">
+                    <video autoplay loop muted playsinline><source src="./imgs/pharmacyVideo.mp4" type="video/mp4"></video>
+                    <video autoplay loop muted playsinline><source src="./imgs/labVideo.mp4" type="video/mp4"></video>
+                </div>
+                <div class="slide-pair">
+                    <video autoplay loop muted playsinline><source src="./imgs/cafeVideo.mp4" type="video/mp4"></video>
+                    <video autoplay loop muted playsinline><source src="./imgs/hallVideo.mp4" type="video/mp4"></video>
+                </div>
             </div>
             
-           
-            <button id="prev">Назад</button>
-            <button id="next">Вперед</button>
+            <button id="prev1" class="SmallButton">❮</button>
+            <button id="next1" class="SmallButton">❯</button>
+        </div>
+    </section>
+
+    <section class="section second">
+        <div class="TextWrap">
+            <h1>Главный холл</h1> 
+            <p>Просторное светлое помещение с матовыми стеклянными <br>стенами, и голограммами иллюстрирующими влияние <br> парниковых газов на климат. Синеватые оттенки интерьера <br> создают атмосферу «воздушной» легкости, а мягкая <br> подсветка в форме круга на полу добавляет <br> футуристический акцент.</p>
+        </div>
+
+        <div class="triple-slider triple-slider1" id="slider1">
+            <div class="slides-container">
+                <div class="slide left">
+                    <div class="svg-container">
+                        <img src="./imgs/LabHall1.svg" alt="photo 1">
+                    </div>
+                </div>
+                <div class="slide center">
+                    <div class="svg-container">
+                        <img src="./imgs/LabHall2.svg" alt="photo 2">
+                    </div>
+                </div>
+                <div class="slide right">
+                    <div class="svg-container">
+                        <img src="./imgs/LabHall3.svg" alt="photo 3">
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev SmallButton">❮</button>
+            <button class="slider-btn next SmallButton">❯</button>
+        </div>
+    </section>
+
+    <section class="section third">
+        <div class="TextWrap">
+            <h1>Лаборатория</h1>
+            <p>Эко-лаборатория Flying Gazes в прямом смысле стирает <br> границы между учёными и теми, кто жаждет заглянуть <br>
+            в будущее экологии.</p>
+        </div>
+
+         <div class="triple-slider triple-slider2" id="slider1">
+            <div class="slides-container">
+                <div class="slide left">
+                    <div class="svg-container">
+                        <img src="./imgs/Lab1.svg" alt="photo 1">
+                    </div>
+                </div>
+                <div class="slide center">
+                    <div class="svg-container">
+                        <img src="./imgs/Lab2.svg" alt="photo 2">
+                    </div>
+                </div>
+                <div class="slide right">
+                    <div class="svg-container">
+                        <img src="./imgs/Lab3.svg" alt="photo 3">
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev SmallButton">❮</button>
+            <button class="slider-btn next SmallButton">❯</button>
+        </div>
+    </section>
+
+<section class="section fourth">
+     <div class="TextWrap">
+<h1>Аптека</h1>
+    <p>Аптека в Flying Gazes - это не просто точка продажи,<br>
+а интерактивное пространство. <br>
+Вместо фармацевтов здесь работают экскурсоводы, <br> готовые рассказать о принципах действия сыворотки <br>
+и провести мини-эксперимент.</p> </div>
+
+         <div class="triple-slider triple-slider3" id="slider1">
+            <div class="slides-container">
+                <div class="slide left">
+                    <div class="svg-container">
+                        <img src="./imgs/LabDrug1.svg" alt="photo 1">
+                    </div>
+                </div>
+                <div class="slide center">
+                    <div class="svg-container">
+                        <img src="./imgs/LabDrug2.svg" alt="photo 2">
+                    </div>
+                </div>
+                <div class="slide right">
+                    <div class="svg-container">
+                        <img src="./imgs/LabDrug3.svg" alt="photo 3">
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev SmallButton">❮</button>
+            <button class="slider-btn next SmallButton">❯</button>
+        </div>
+</section>
+
+<section class="section fifth">
+<div class="TextWrap">
+            <h1>Кафе</h1>
+            <p>В сердце открытой лаборатории Flying Gazes <br> расположилось кафе, которое переоснысливает понятие <br> экопитания. Здесь еда - не просто энергия, а часть <br> глобального эксперимента по снижению углеродного следа.</p>
+        </div>
+
+        <div class="triple-slider triple-slider4" id="slider1">
+            <div class="slides-container">
+                <div class="slide left">
+                    <div class="svg-container">
+                        <img src="./imgs/cafe1.svg" alt="photo 1">
+                    </div>
+                </div>
+                <div class="slide center">
+                    <div class="svg-container">
+                        <img src="./imgs/cafe2.svg" alt="photo 2">
+                    </div>
+                </div>
+                <div class="slide right">
+                    <div class="svg-container">
+                        <img src="./imgs/cafe3.svg" alt="photo 3">
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev SmallButton">❮</button>
+            <button class="slider-btn next SmallButton">❯</button>
         </div>
 
 </section>
 
+<footer class="MainFooter">
 
-<script defer src="./scripts/laboratory.js"></script>
+   <div class="footer-buttons">
+    <a href="https://dear-deer1.github.io/ARt/" class="FooterBtn btn1">Online lab</a>
+    <a href="https://portfolio.hse.ru/User/Projects" class="FooterBtn btn2">Profile</a>
+    <a href="https://dear-deer1.github.io/Flying-Gazes/" class="FooterBtn btn3">Web-poster</a>
+  </div>
+
+</footer>
+    <script defer src="./scripts/laboratory.js"></script>
 </body>
 </html>
