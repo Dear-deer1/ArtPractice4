@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    background-color: rgba(68, 0, 255, 1);
+    background-color: #4400ff;
     cursor: url('../imgs/cursor.svg') 16 16, auto;
     overflow-x: hidden;
 }
@@ -20,8 +20,8 @@ body {
     color: white;
     font-family: 'FuturaHeavy';
     text-decoration: none;
-    cursor: url('../imgs/cursor.svg') 16 16, auto;
     transition: opacity 0.3s ease;
+    cursor: inherit;
 }
 
 .HeaderText:hover {
@@ -29,7 +29,7 @@ body {
 }
 
 .BookHeader {
-    text-decoration-line: underline;
+    text-decoration: underline;
 }
 
 h1 {
@@ -50,28 +50,22 @@ p {
 .TextWrap {
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 4vw;
+    margin: 0 0 3vw 4vw;
     max-width: 80%;
     gap: 1.75vw;
-    margin-bottom: 3vw;
 }
 
 .VideoWrapper {
-    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: 3vw 0 6vw;
 }
 
 .BookVideo {
     width: 88%;
-    height: auto;
     border-radius: 4vw;
-    z-index: 1;
     rotate: 180deg;
-    object-fit: contain; /* Изменено на contain для полного отображения */
+    object-fit: contain;
 }
 
 .section {
@@ -80,46 +74,41 @@ p {
     width: 100%;
 }
 
-/* Стили для контейнера слайдера */
 .SliderContainer1 {
     position: relative;
     width: 100%;
     max-width: 1400px;
     margin: 4vw auto;
     overflow: hidden;
-    height: 45vw; /* Фиксированная высота контейнера */
-    max-height: 650px; /* Максимальная высота */
+    height: 45vw;
+    max-height: 650px;
 }
 
-/* Контейнер для пар видео */
 .VideoWrapper1 {
     display: flex;
     width: 200%;
-    height: 100%; /* Занимает всю высоту родителя */
+    height: 100%;
     opacity: 0;
     transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-/* Контейнер для пары видео */
 .slide-pair {
     display: flex;
     width: 50%;
     gap: 1.5vw;
     padding: 0 1vw;
     box-sizing: border-box;
-    height: 100%; /* Занимает всю высоту родителя */
+    height: 100%;
 }
 
-/* Стили для отдельных видео */
 .slide-pair video {
-    flex: 1; /* Равномерное распределение пространства */
+    flex: 1;
     width: 100%;
-    height: 100%; /* Занимает всю высоту родителя */
+    height: 100%;
     border-radius: 2vw;
-    object-fit: contain; /* Изменено на contain для полного отображения */
-    transition: transform 0.3s ease;
+    object-fit: contain;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.1); /* Фон на время загрузки */
+    background-color: rgba(0, 0, 0, 0.1);
     transition: opacity 0.8s ease, transform 0.3s ease;
 }
 
@@ -127,7 +116,6 @@ p {
     transform: scale(1.02);
 }
 
-/* Кнопки навигации */
 .SmallButton {
     position: absolute;
     top: 50%;
@@ -141,44 +129,154 @@ p {
     min-height: 50px;
     border: none;
     border-radius: 50%;
-    background-color: transparent;
-    background-image: url('../imgs/SmallButton.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: transparent url('../imgs/SmallButton.svg') center/contain no-repeat;
     font-family: 'FuturaHeavy';
     font-size: 1.4vw;
-    color: rgba(68, 0, 255, 1);
+    color: #4400ff;
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.3s ease;
     z-index: 20;
-    overflow: hidden;
     padding: 0;
-}
-
-.SliderContainer1 .SmallButton {
-    z-index: 10;
 }
 
 .SliderContainer1 .SmallButton:nth-child(2) {
     left: 2vw;
+    z-index: 10;
 }
 
 .SliderContainer1 .SmallButton:nth-child(3) {
     right: 2vw;
+    z-index: 10;
 }
 
 .SliderContainer1 .SmallButton:hover {
     opacity: 1;
-    background-color: rgba(68, 0, 255, 1);
+    background-color: #4400ff;
     transform: translateY(-50%) scale(1.15);
     color: white;
     background-image: none;
     box-shadow: 0 0 2vw rgba(68, 0, 255, 0.7);
 }
 
-/* Адаптивность */
+.part1, .part2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin: 4vw 0;
+}
+
+.part1 p, .part2 p {
+    max-width: 45%;
+    text-align: start;
+}
+
+.img1, .img2, .img3 {
+    max-width: 75%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.part3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vw;
+    width: 100%;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 30px 0;
+}
+
+.PreFooterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/button.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.PreFooterBtn:hover {
+    opacity: 0.65;
+}
+
+.MainFooter {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vw;
+    background: url('../imgs/footer.svg') center/contain no-repeat;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 30px 0;
+}
+
+.FooterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #4400ff;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/button.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.FooterBtn:hover {
+    opacity: 0.65;
+}
+
+@media (max-width: 1200px) {
+    .PreFooterBtn, .FooterBtn {
+        width: 18vw;
+        height: 4vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .TextWrap {
+        max-width: 90%;
+    }
+    
+    .ButtonContainer, .footer-buttons {
+        gap: 10vw;
+    }
+    
+    .PreFooterBtn, .FooterBtn {
+        width: 20vw;
+        height: 5vw;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 6vw;
@@ -195,14 +293,96 @@ p {
     }
     
     .SliderContainer1 {
-        height: 60vw; /* Увеличиваем высоту для мобильных */
+        height: 100vw;
     }
     
     .slide-pair {
-        flex-direction: column; /* Вертикальное расположение на мобильных */
+        flex-direction: column;
     }
     
     .slide-pair video {
-        height: 48%; /* Разделяем высоту между двумя видео */
+        height: 48%;
+    }
+    
+    .part1, .part2 {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .part1 p, .part2 p {
+        max-width: 80%;
+        font-size: 3vw;
+        text-align: center;
+    }
+    
+    .img1, .img2, .img3 {
+        max-width: 70%;
+    }
+    
+    .PreFooterBtn, .FooterBtn {
+        width: 35vw;
+        height: 8vw;
+        font-size: 3vw;
+        border-radius: 4vw;
+    }
+    
+    .ButtonContainer, .footer-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .MainFooter {
+        height: 30vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .NormalMenu {
+        width: 90%;
+        margin: 4vw auto;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    p {
+        font-size: 3.5vw;
+    }
+    
+    .TextWrap {
+        margin-left: 5vw;
+        gap: 3vw;
+    }
+    
+    .PreFooterBtn, .FooterBtn {
+        width: 50vw;
+        height: 12vw;
+        font-size: 4vw;
+    }
+    
+    .part1 p, .part2 p {
+        max-width: 90%;
+        font-size: 4vw;
+    }
+
+    .MainFooter {
+        height: 40vw;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 7vw;
+    }
+    
+    .PreFooterBtn, .FooterBtn {
+        width: 60vw;
+        height: 15vw;
+        font-size: 4.5vw;
+    }
+    
+    .img1, .img2, .img3 {
+        max-width: 85%;
     }
 }

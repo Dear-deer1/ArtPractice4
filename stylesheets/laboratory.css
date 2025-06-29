@@ -1,11 +1,13 @@
 body {
     display: flex;
-    background-color: rgba(68, 0, 255, 1);
+    background-color: #4400ff;
     min-height: 100vh;
     width: 100%;
     cursor: url('../imgs/cursor.svg') 16 16, auto;
     flex-direction: column;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .NormalMenu {
@@ -21,7 +23,6 @@ body {
     color: white;
     font-family: 'FuturaHeavy';
     text-decoration: none;
-    cursor: url('../imgs/cursor.svg') 16 16, auto;
 }
 
 .HeaderText:hover {
@@ -29,13 +30,14 @@ body {
 }
 
 .LaboratotyHeader {
-    text-decoration-line: underline;
+    text-decoration: underline;
 }
 
 h1 {
     color: #FFF;
     font-family: "TTTravels";
     font-size: 4vw;
+    margin: 0;
 }
 
 p {
@@ -43,8 +45,8 @@ p {
     font-family: "FuturaBook";
     font-size: 1.5vw;
     line-height: 120%;
+    margin: 0;
 }
-
 
 .section {
     display: flex;
@@ -62,34 +64,30 @@ p {
 }
 
 .VideoWrapper {   
-    top: 3vw;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 3vw;
 }
 
 .video1 {
-    height: auto;
     width: 88%;
     border-radius: 4vw;
-    z-index: 1;
 }
 
 .VideoText {
-    z-index: 2;
-    top: -4vw;
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-top: -4vw;
 }
 
 .TextImg {
-    height: auto;
     width: 90%;
 }
 
+/* Стили для первого слайдера (SliderContainer1) */
 .SliderContainer1 {
     width: 100%;
     max-width: 1400px;
@@ -102,7 +100,6 @@ p {
     display: flex;
     transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     width: 200%;
-    opacity: 0;
 }
 
 .slide-pair {
@@ -127,6 +124,7 @@ p {
     transform: scale(1.02);
 }
 
+/* Стили для тройного слайдера */
 .triple-slider {
     position: relative;
     width: 95%;
@@ -134,7 +132,6 @@ p {
     height: 80vh;
     min-height: 600px;
     margin: 8vw auto;
-    overflow: visible;
 }
 
 .slides-container {
@@ -152,7 +149,6 @@ p {
     justify-content: center;
     align-items: center;
     transition: all 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-    perspective: 1000px;
 }
 
 .svg-container {
@@ -169,7 +165,6 @@ p {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
     filter: drop-shadow(0 1.5vw 3vw rgba(0, 0, 0, 0.3));
     transition: transform 0.5s ease;
 }
@@ -208,6 +203,7 @@ p {
     transform: scale(1.15);
 }
 
+/* Общие стили для кнопок */
 .SmallButton {
     position: absolute;
     top: 50%;
@@ -234,9 +230,10 @@ p {
     background-position: center;
     font-family: 'FuturaHeavy';
     font-size: 1.4vw;
-    color: rgba(68, 0, 255, 1);
+    color: #4400ff;
 }
 
+/* Специфические стили для кнопок в SliderContainer1 */
 .SliderContainer1 .SmallButton {
     z-index: 10;
 }
@@ -249,6 +246,16 @@ p {
     right: 2vw;
 }
 
+.SliderContainer1 .SmallButton:hover {
+    opacity: 1;
+    background-color: #4400ff;
+    transform: translateY(-50%) scale(1.15);
+    color: white;
+    background-image: none;
+    box-shadow: 0 0 2vw rgba(68, 0, 255, 0.7);
+}
+
+/* Стили для кнопок в тройном слайдере */
 .triple-slider .SmallButton.prev {
     left: 1.5vw;
 }
@@ -257,24 +264,56 @@ p {
     right: 1.5vw;
 }
 
-.SliderContainer1 .SmallButton:hover {
-    opacity: 1;
-    background-color: rgba(68, 0, 255, 1);
-    transform: translateY(-50%) scale(1.15);
-    color: white;
-    background-image: none;
-    box-shadow: 0 0 2vw rgba(68, 0, 255, 0.7);
-}
-
 .triple-slider .SmallButton:hover {
     opacity: 1;
     background-color: white;
     transform: translateY(-50%) scale(1.15);
-    color: rgba(68, 0, 255, 1);
+    color: #4400ff;
     background-image: none;
     box-shadow: 0 0 2vw rgba(255, 255, 255, 0.7);
 }
 
+/* Стили для футера */
+.MainFooter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vw;
+    background: url('../imgs/footer.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.FooterBtn {
+    display: flex;
+    text-decoration: none;
+    color: #4400ff;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/button.svg') no-repeat center center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    transition: opacity 0.3s ease;
+}
+
+.FooterBtn:hover {
+    opacity: 0.65;
+}
+
+/* Адаптивные стили */
 @media (max-width: 1600px) {
     .triple-slider .SmallButton.prev {
         left: 0.5vw;
@@ -285,35 +324,83 @@ p {
 }
 
 @media (max-width: 1200px) {
+    .NormalMenu {
+        width: 45vw;
+    }
     .triple-slider .SmallButton {
         width: 6vw;
         height: 6vw;
         font-size: 2vw;
     }
+    .triple-slider {
+        height: 70vh;
+        min-height: 500px;
+    }
+    .slide-pair video {
+        height: 42vw;
+    }
+    .SliderContainer1 .SmallButton {
+        width: 6vw;
+        height: 6vw;
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .NormalMenu {
+        width: 55vw;
+    }
+    .slide-pair video {
+        height: 45vw;
+        max-height: 500px;
+    }
+    .triple-slider {
+        height: 65vh;
+        min-height: 450px;
+    }
+    .SliderContainer1 .SmallButton {
+        width: 7vw;
+        height: 7vw;
+        font-size: 2.2vw;
+    }
 }
 
 @media (max-width: 768px) {
+    .NormalMenu {
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+        margin-top: 4vw;
+    }
+    .HeaderText {
+        font-size: 2.2vw;
+        margin: 1vw;
+    }
+    .video1 {
+        width: 95%;
+    }
+    .TextWrap {
+        left: 3vw;
+    }
     h1 {
-        font-size: 6vw;
-    }
-    p {
-        font-size: 2.5vw;
-    }
-    .SmallButton {
-        width: 10vw;
-        height: 10vw;
-        font-size: 4vw;
-    }
-    .triple-slider .SmallButton {
-        width: 12vw;
-        height: 12vw;
         font-size: 5vw;
     }
-    .triple-slider .SmallButton.prev {
-        left: 1vw;
+    p {
+        font-size: 2.2vw;
     }
-    .triple-slider .SmallButton.next {
-        right: 1vw;
+    .slide-pair {
+        flex-direction: column;
+        gap: 3vw;
+        padding: 0 3vw;
+    }
+    .slide-pair video {
+        height: 50vw;
+        border-radius: 3vw;
+    }
+    .triple-slider {
+        height: 60vh;
+        min-height: 400px;
+        margin: 10vw auto;
     }
     .slide.left,
     .slide.right {
@@ -324,59 +411,11 @@ p {
         width: 45%;
         height: 85%;
     }
-}
-
-.triple-slider {
-    overflow: visible;
-    position: relative;
-    padding: 0 4vw;
-}
-
-.triple-slider .SmallButton {
-    z-index: 30;
-}
-
-.triple-slider .SmallButton {
-    max-width: 80px;
-    max-height: 80px;
-}
-
-@media (min-width: 1600px) {
-    .triple-slider .SmallButton.prev {
-        left: calc(50% - 45vw);
+    .SmallButton {
+        width: 8vw;
+        height: 8vw;
+        font-size: 2.8vw;
     }
-    .triple-slider .SmallButton.next {
-        right: calc(50% - 45vw);
-    }
-}
-
-@media (max-width: 1400px) {
-    .triple-slider .SmallButton.prev {
-        left: 1vw;
-    }
-    .triple-slider .SmallButton.next {
-        right: 1vw;
-    }
-}
-
-@media (max-width: 1200px) {
-    .triple-slider .SmallButton {
-        width: 6vw;
-        height: 6vw;
-        font-size: 2vw;
-    }
-}
-
-@media (max-width: 992px) {
-    .triple-slider .SmallButton.prev {
-        left: 0.5vw;
-    }
-    .triple-slider .SmallButton.next {
-        right: 0.5vw;
-    }
-}
-
-@media (max-width: 768px) {
     .triple-slider .SmallButton {
         width: 12vw;
         height: 12vw;
@@ -388,74 +427,111 @@ p {
     .triple-slider .SmallButton.next {
         right: 2vw;
     }
+    .FooterBtn {
+        font-size: 2.2vw;
+        width: 22vw;
+        height: 4vw;
+    }
 }
 
 @media (max-width: 576px) {
-    .triple-slider .SmallButton.prev {
-        left: 1vw;
+    .NormalMenu {
+        margin-top: 6vw;
     }
-    .triple-slider .SmallButton.next {
-        right: 1vw;
+    .HeaderText {
+        font-size: 3vw;
+    }
+    .TextWrap {
+        left: 2vw;
+        gap: 3vw;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    p {
+        font-size: 3vw;
+    }
+    .SliderContainer1 {
+        margin: 6vw auto;
+    }
+    .slide-pair video {
+        height: 60vw;
+    }
+    .triple-slider {
+        height: 50vh;
+        min-height: 350px;
+    }
+    .slide.left,
+    .slide.right {
+        width: 30%;
+        height: 55%;
+    }
+    .slide.center {
+        width: 40%;
+        height: 75%;
+    }
+    .SmallButton {
+        width: 10vw;
+        height: 10vw;
+        font-size: 3.5vw;
+    }
+    .SliderContainer1 .SmallButton {
+        width: 12vw;
+        height: 12vw;
+        font-size: 4.5vw;
+    }
+    .MainFooter {
+        height: 25vw;
+    }
+    .FooterBtn {
+        font-size: 2.8vw;
+        width: 28vw;
+        height: 6vw;
+        border-radius: 3vw;
     }
 }
 
-body {
-    overflow-x: hidden;
-}
-
-.triple-slider {
-    position: relative;
-    padding: 0 3vw;
-    box-sizing: border-box;
-}
-
-.MainFooter {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 20vw;
-    background-image: url('../imgs/footer.svg');
-      background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-}
-
-.FooterImg {
-    width: 102%;
-    height: 20vw;
-    z-index: 1;
-}
-
-
-.footer-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15vw;
-  padding: 30px 0;
-}
-
-.FooterBtn {
-  display: flex;
-  text-decoration: none;
-  color: rgba(68, 0, 255, 1);
-  font-family: 'FuturaHeavy';
-  font-size: 1.4vw;
-  background-image: url('../imgs/button.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2vw;
-  width: 15vw;     
-  height: 3vw;  
-  text-align: center;
-  transition: opacity 0.3s ease;
-}
-
-.FooterBtn:hover {
-  opacity: 0.65;
+@media (max-width: 480px) {
+    .NormalMenu {
+        margin-top: 8vw;
+    }
+    .HeaderText {
+        font-size: 3.5vw;
+    }
+    .video1 {
+        border-radius: 6vw;
+    }
+    h1 {
+        font-size: 7vw;
+    }
+    p {
+        font-size: 3.5vw;
+    }
+    .slide-pair video {
+        height: 70vw;
+        border-radius: 4vw;
+    }
+    .triple-slider {
+        height: 45vh;
+        min-height: 300px;
+    }
+    .slide img {
+        filter: drop-shadow(0 3vw 4vw rgba(0, 0, 0, 0.3));
+    }
+    .MainFooter {
+        height: 30vw;
+    }
+    .footer-buttons {
+        gap: 8vw;
+    }
+    .FooterBtn {
+        font-size: 3.5vw;
+        width: 35vw;
+        height: 8vw;
+    }
+    .SliderContainer1 .SmallButton {
+        width: 14vw;
+        height: 14vw;
+        font-size: 5.5vw;
+    }
 }

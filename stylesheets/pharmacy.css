@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    background-color: #4400ff;
+    min-height: 100vh;
+    width: 100%;
+    cursor: url('../imgs/cursor.svg') 16 16, auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.NormalMenu {
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 2vw;
+    width: 35vw;
+    justify-content: space-between;
+}
+
+.HeaderText {
+    color: white;
+    font-family: 'FuturaHeavy';
+    text-decoration: none;
+    font-size: 1.1vw;
+}
+
+.HeaderText:hover {
+    opacity: 0.8;
+}
+
+.PharmacyHeader {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #FFF;
+    font-family: "TTTravels";
+    font-size: 4vw;
+    margin: 0;
+}
+
+p {
+    color: #FFF;
+    font-family: "FuturaBook";
+    font-size: 1.5vw;
+    line-height: 120%;
+    margin: 0;
+}
+
+.VideoWrapper {   
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.PharmacyVideo {
+    width: 88%;
+    border-radius: 4vw;
+}
+
+.VideoText {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -4vw;
+}
+
+.TextImg {
+    width: 90%;
+}
+
+.TextWrap1 {
+    position: relative;
+    margin-left: 4vw;
+    margin-top: 3vw;
+}

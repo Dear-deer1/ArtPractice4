@@ -61,3 +61,34 @@ document.addEventListener('DOMContentLoaded', function() {
         scaleVideos();
     }
 });
+
+   function setupImageToggle(className, baseName) {
+        const images = document.querySelectorAll(className);
+        images.forEach(img => {
+            let isOriginal = true;
+            
+            img.addEventListener('click', () => {
+                const currentSrc = img.src;
+                const newSrc = isOriginal 
+                    ? currentSrc.replace('.svg', '_2.svg')
+                    : currentSrc.replace('_2.svg', '.svg');
+                
+                img.src = newSrc;
+                isOriginal = !isOriginal;
+                
+                // Анимация перехода
+                img.style.opacity = 0;
+                setTimeout(() => {
+                    img.style.transition = 'opacity 0.5s ease';
+                    img.style.opacity = 1;
+                }, 10);
+            });
+        });
+    }
+
+    // Инициализация для всех изображений
+    document.addEventListener('DOMContentLoaded', () => {
+        setupImageToggle('.img1', 'Book1');
+        setupImageToggle('.img2', 'Book2');
+        setupImageToggle('.img3', 'Book3');
+    });
