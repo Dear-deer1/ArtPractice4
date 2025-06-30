@@ -49,6 +49,14 @@ p {
     margin: 0;
 }
 
+h2 {
+    color: #FFF;
+    font-family: "FuturaHeavy";
+    font-size: 1.5vw;
+    line-height: 120%;
+    margin: 0;
+}
+
 .VideoWrapper {   
     position: relative;
     display: flex;
@@ -73,8 +81,260 @@ p {
     width: 90%;
 }
 
-.TextWrap1 {
+.TextWrap {
     position: relative;
-    margin-left: 4vw;
-    margin-top: 3vw;
+    display: flex;
+    left: 4vw;
+    flex-direction: column;
+    gap: 1.75vw;
+    max-width: 80%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+.TextWrap2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75vw;
+    max-width: 80%;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+.BigContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.PharmacyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.PharmacyImg {
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.PharmacyContainer a {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.PharmacyImg:hover {
+    transform: scale(1.05);
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vw;
+}
+
+.PreFooterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/BigButton.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 30vw;
+    height: 3vw;
+    transition: opacity 0.3s ease;
+}
+
+.PreFooterBtn:hover {
+    opacity: 0.65;
+}
+
+.MainFooter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vw;
+    background: url('../imgs/footer.svg') center/contain no-repeat;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 30px 0;
+}
+
+.FooterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #4400ff;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/button.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    transition: opacity 0.3s ease;
+}
+
+.FooterBtn:hover {
+    opacity: 0.65;
+}
+
+@media (max-width: 1200px) {
+    .PharmacyContainer {
+        width: 28%;
+    }
+    .PreFooterBtn {
+        font-size: 1.6vw;
+        width: 32vw;
+    }
+    .FooterBtn {
+        font-size: 1.6vw;
+        width: 16vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .NormalMenu {
+        width: 45vw;
+    }
+    .BigContainer {
+        padding: 0 3vw;
+    }
+    .PharmacyContainer {
+        width: 30%;
+        padding: 1.5vw;
+    }
+    .PreFooterBtn {
+        font-size: 1.8vw;
+        width: 35vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .NormalMenu {
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .HeaderText {
+        font-size: 2.2vw;
+        margin: 1vw;
+    }
+    .PharmacyVideo {
+        width: 95%;
+    }
+    h1 {
+        font-size: 5vw;
+    }
+    p, h2 {
+        font-size: 2.2vw;
+    }
+    .BigContainer {
+        flex-direction: column;
+        gap: 6vw;
+        padding: 0 5vw;
+    }
+    .PharmacyContainer {
+        width: 100%;
+        max-width: 400px;
+        padding: 3vw;
+    }
+    .PharmacyImg {
+        width: 60%;
+    }
+    .TextWrap {
+        left: 2vw;
+        gap: 3vw;
+    }
+    .PreFooterBtn {
+        font-size: 2.2vw;
+        width: 40vw;
+        height: 4vw;
+    }
+    .FooterBtn {
+        font-size: 2.2vw;
+        width: 20vw;
+        height: 4vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .NormalMenu {
+        margin-top: 4vw;
+    }
+    .HeaderText {
+        font-size: 3vw;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    p, h2 {
+        font-size: 3vw;
+    }
+    .PharmacyContainer {
+        padding: 4vw;
+    }
+    .PreFooterBtn {
+        font-size: 3vw;
+        width: 50vw;
+        height: 6vw;
+    }
+    .FooterBtn {
+        font-size: 2.8vw;
+        width: 25vw;
+        height: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .NormalMenu {
+        margin-top: 6vw;
+    }
+    .HeaderText {
+        font-size: 3.5vw;
+    }
+    .PharmacyVideo {
+        border-radius: 6vw;
+    }
+    h1 {
+        font-size: 7vw;
+    }
+    p, h2 {
+        font-size: 3.5vw;
+    }
+    .PharmacyImg {
+        width: 70%;
+    }
+    .PreFooterBtn {
+        font-size: 3.5vw;
+        width: 60vw;
+        height: 8vw;
+        border-radius: 3vw;
+    }
+    .FooterBtn {
+        font-size: 3.5vw;
+        width: 30vw;
+        height: 6vw;
+        border-radius: 3vw;
+    }
+    .footer-buttons {
+        gap: 8vw;
+    }
 }
