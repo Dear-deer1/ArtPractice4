@@ -1,0 +1,371 @@
+body {
+    display: flex;
+    background-color: #4400ff;
+    min-height: 100vh;
+    width: 100%;
+    cursor: url('../imgs/cursor.svg') 16 16, auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.NormalMenu {
+    display: flex;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 2vw;
+    width: 35vw;
+    justify-content: space-between;
+}
+
+.HeaderText {
+    color: white;
+    font-family: 'FuturaHeavy';
+    text-decoration: none;
+    font-size: 1.1vw;
+}
+
+.HeaderText:hover {
+    opacity: 0.8;
+}
+
+.PostersHeader {
+    text-decoration: underline;
+}
+
+h1 {
+    color: #FFF;
+    font-family: "TTTravels";
+    font-size: 4vw;
+    margin: 0;
+}
+
+p {
+    color: #FFF;
+    font-family: "FuturaBook";
+    font-size: 1.5vw;
+    line-height: 120%;
+    margin: 0;
+}
+
+h2 {
+    color: #FFF;
+    font-family: "FuturaHeavy";
+    font-size: 1.5vw;
+    line-height: 120%;
+    margin: 0;
+}
+
+.ImgWrapper {   
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vw;
+}
+
+.Mascote {
+    width: 88%;
+    border-radius: 4vw;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Mascote:hover {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ImgText {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -30vw;
+    z-index: 10;
+}
+
+.TextImg {
+    width: 90%;
+}
+
+.TextWrap1 {
+    position: relative;
+    display: flex;
+    left: 4vw;
+    flex-direction: column;
+    gap: 1.75vw;
+    max-width: 80%;
+    padding-top: 20vw;
+}
+
+.TextWrap2 {
+    position: relative;
+    display: flex;
+    left: 4vw;
+    flex-direction: column;
+    gap: 1.75vw;
+    max-width: 80%;
+    padding-top: 8vw;
+}
+
+.BigContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    padding-top: 6vw;
+}
+
+.PosterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.PosterImg {
+    width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.PosterImg:hover {
+    transform: scale(1.05);
+}
+
+.PosterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/Button.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    transition: opacity 0.3s ease;
+    margin-top: 2vw;
+}
+
+.PosterBtn:hover {
+    opacity: 0.65;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+    padding: 3vw 0;
+}
+
+.PreFooterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/BigButton.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 20vw;
+    height: 3vw;
+    transition: opacity 0.3s ease;
+}
+
+.PreFooterBtn:hover {
+    opacity: 0.65;
+}
+
+.MainFooter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vw;
+    background: url('../imgs/footer.svg') center/contain no-repeat;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 30px 0;
+}
+
+.FooterBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #4400ff;
+    font-family: 'FuturaHeavy';
+    font-size: 1.4vw;
+    background: url('../imgs/button.svg') center/cover no-repeat;
+    border-radius: 2vw;
+    width: 15vw;
+    height: 3vw;
+    transition: opacity 0.3s ease;
+}
+
+.FooterBtn:hover {
+    opacity: 0.65;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .BigContainer {
+        flex-wrap: wrap;
+        gap: 3vw;
+    }
+    .PosterContainer {
+        width: 45%;
+    }
+    .PreFooterBtn {
+        font-size: 1.6vw;
+        width: 22vw;
+    }
+    .FooterBtn {
+        font-size: 1.6vw;
+        width: 16vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .NormalMenu {
+        width: 45vw;
+    }
+    .PosterBtn {
+        font-size: 1.8vw;
+        width: 17vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .NormalMenu {
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .HeaderText {
+        font-size: 2.2vw;
+        margin: 1vw;
+    }
+    .ImgText {
+        margin-top: -25vw;
+    }
+    h1 {
+        font-size: 5vw;
+    }
+    .TextWrap1, .TextWrap2 {
+        left: 2vw;
+        gap: 3vw;
+    }
+    .BigContainer {
+        flex-direction: column;
+        gap: 6vw;
+        padding: 0 5vw;
+    }
+    .PosterContainer {
+        width: 100%;
+        max-width: 500px;
+    }
+    .PosterImg {
+        width: 100%;
+    }
+    .PosterBtn {
+        font-size: 2.2vw;
+        width: 20vw;
+        height: 4vw;
+    }
+    .PreFooterBtn {
+        font-size: 2.2vw;
+        width: 35vw;
+        height: 4vw;
+    }
+    .FooterBtn {
+        font-size: 2.2vw;
+        width: 20vw;
+        height: 4vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .NormalMenu {
+        margin-top: 4vw;
+    }
+    .HeaderText {
+        font-size: 3vw;
+    }
+    .ImgText {
+        margin-top: -20vw;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    .PosterBtn {
+        font-size: 3vw;
+        width: 25vw;
+        height: 5vw;
+    }
+    .PreFooterBtn {
+        font-size: 3vw;
+        width: 50vw;
+        height: 6vw;
+    }
+    .FooterBtn {
+        font-size: 2.8vw;
+        width: 25vw;
+        height: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .NormalMenu {
+        margin-top: 6vw;
+    }
+    .HeaderText {
+        font-size: 3.5vw;
+    }
+    .Mascote {
+        border-radius: 6vw;
+    }
+    h1 {
+        font-size: 7vw;
+    }
+    .PosterBtn {
+        font-size: 3.5vw;
+        width: 30vw;
+        height: 6vw;
+        border-radius: 3vw;
+    }
+    .PreFooterBtn {
+        font-size: 3.5vw;
+        width: 60vw;
+        height: 8vw;
+        border-radius: 3vw;
+    }
+    .FooterBtn {
+        font-size: 3.5vw;
+        width: 30vw;
+        height: 6vw;
+        border-radius: 3vw;
+    }
+    .footer-buttons {
+        gap: 8vw;
+    }
+}
